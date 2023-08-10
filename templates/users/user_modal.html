@@ -1,0 +1,23 @@
+<div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="profile-modal-label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="profile-modal-label">Edit Profile</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST">
+          <div class="col-md-12 mb-3">
+            <label for="email">Email</label>
+            <input type="text" required class="form-control" id="account-email-form" name="email" value="{{email}}"
+              placeholder="Email">
+          </div>
+          <button id="profile-modal-btn" type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

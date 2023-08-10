@@ -1,0 +1,49 @@
+{% extends "shared/base.html" %}
+
+{% block title %}
+<title>My Books</title>
+{% endblock %}
+
+{% block content %}
+
+{% include "components/navbar.html" %}
+
+<div class="container" id="dashboard-container">
+
+  <h1 class="text-center">My Books</h1>
+
+  <div class="row" id="rencent-addtion-container">
+    <div class="col main pt-3 ">
+      <div class="row mb-3">
+
+        <table id="myTable" class="display" style="width:100%">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN</th>
+              <th>Date Published</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN</th>
+              <th>Date Published</th>
+              <th>Action</th>
+            </tr>
+          </tfoot>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  {% include "books/add_edit_modal.html" %}
+
+  {% include "books/delete_modal.html" %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+version: "2"
+services:
+  app_server:
+    image: app_server:0.0.1
+    build:
+      context: .
+      dockerfile: ./docker/server/Dockerfile
+    container_name: app_server
+    command: /start.sh
+    environment: 
+      APP_CONFIG: development
+      LOG_LEVEL: DEBUG
+      APP_SECRET: my_secret
+    ports:
+      - 8000:8000
+    networks:
+      - local-net
+  
+networks:
+  local-net:
+    driver: bridge

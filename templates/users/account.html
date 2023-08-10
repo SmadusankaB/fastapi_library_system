@@ -1,0 +1,41 @@
+{% extends "shared/base.html" %}
+
+{% block title %}
+<title>My Account</title>
+{% endblock %}
+
+{% block content %}
+
+{% include "components/navbar.html" %}
+
+<div class="container" id="dashboard-container">
+  
+  <h1 class="text-center">My Account</h1>
+
+  <div class="row" id="rencent-addtion-container">
+    <div class="col main pt-3 ">
+      <div class="row mb-3">
+
+        <div class="lib-form">
+          <div class="row">
+            <form>
+              <div class="mb-3">
+                <label>Username: </label> <label id="account-username"></label>
+              </div>
+              <div class="mb-3">
+                <label>Email: </label> <label id="account-email"></label>
+              </div>
+              <button type="button"  data-bs-toggle="modal" data-bs-target="#profile-modal" class="btn btn-primary">Edit</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% include "users/user_modal.html" %}
+
+{% endblock %}
