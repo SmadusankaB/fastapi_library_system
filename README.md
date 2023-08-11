@@ -1,10 +1,9 @@
 # FastAPI Book management system
 
-This is a simple book management system developed using FASTAPI + Jquery + Jinj2
+This is a simple book management system developed using FASTAPI + Jquery + Jinja2
 
 ## Table of Content
 
-- [Demo](#Demo)
 - [Requirements](#Requirements)
 - [How to install and use application](#How-to-install-and-use-application)
   - [Run locally](#Run-locally)
@@ -13,16 +12,8 @@ This is a simple book management system developed using FASTAPI + Jquery + Jinj2
     - [Build docker images](#Build-docker-images)
     - [Run as docker containers](#Run-as-docker-containers)
 - [Testing](#Testing)
-- [Technologies and architecture](#Technologies-and-architecture)
-
-## Demo
-
-![Home](./docs/image_1.png)
-![Signup](./docs/image_2.png)
-![Signin](./docs/image_3.png)
-![Dashboard](./docs/image_4.png)
-![Mybooks](./docs/image_5.png)
-![Myaccount](./docs/image_6.png)
+- [Technologies](#Technologies)
+- [Demo](#Demo)
 
 ## Requirements
 
@@ -61,7 +52,7 @@ LOG_LEVEL=DEBUG
 APP_CONFIG=development
 ```
 
-By default, application will run on development mode with DEBUG level. Override default behavior exporting following variables in terminal.
+By default, application will run on development mode with DEBUG level. Override default behavior exporting following variables in the terminal.
 
 Supported values:
 
@@ -73,7 +64,7 @@ export APP_CONFIG=development
 export LOG_LEVEL=DEBUG
 ```
 
-To run FastAPI server execute the following command. If any failure, check [troubleshoot](#Troubleshooting) section
+To run FastAPI server execute the following command.
 
 ```bash
 uvicorn main:app --reload --reload-dir .  --host 0.0.0.0 --port 8000
@@ -94,9 +85,7 @@ docker-compose build
 
 #### Run as docker containers
 
-This step is optional. You may proceed to [Run on Kind cluster](#Run-on-Kind-cluster)
-
-Set required values in .env file(docker-compose uses .env by default if --env-file=FILE_PATH is not specified)
+Set required values in .env file(docker-compose uses .env by default if --env-file=FILE_PATH is not specified) or directly update docker-compose.yaml file 
 
 Bring up Docker containers running the following command
 
@@ -110,8 +99,6 @@ docker-compose up
 ## Testing
 
 To run tests execute the following commands in a new terminal:
-
-If any failure, check [troubleshoot](#Troubleshooting) section
 
 ```bash
 cd fastapi_library_system
@@ -140,3 +127,12 @@ pytest
 
 - black 
 - flake8
+
+## Demo
+
+![Home](./docs/image_1.png)
+![Signup](./docs/image_2.png)
+![Signin](./docs/image_3.png)
+![Dashboard](./docs/image_4.png)
+![Mybooks](./docs/image_5.png)
+![Myaccount](./docs/image_6.png)
